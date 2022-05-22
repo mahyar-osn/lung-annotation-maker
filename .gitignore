@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Pycharm .idea
+.idea/
+
+# Downloaded model
+downloaded_model/
