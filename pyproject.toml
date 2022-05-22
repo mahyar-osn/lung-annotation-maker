@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "lung-annotation-maker"
+version = "0.1.0"
+description = "This Python package reads an .exdata file from a segmented lung image, and outputs an
+ .exdata file with each point annotated to its corresponding anatomical ontology."
+authors = ["Mahyar Osanlouy <m.osanlouy@auckland.ac.nz>"]
+license = "Apache"
+readme = "README.rst"
+homepage = "https://github.com/mahyar-osn/lung-annotation-maker"
+repository = "https://github.com/mahyar-osn/lung-annotation-maker"
+keywords = ["lung", "annotation", "scaffold", "fitting"]
+
+classifiers = [
+    "Environment :: Console",
+    "Framework :: PyTorch, OpenCMISS-Zinc",
+    "Operating System :: OS Independent",
+]
+
+
+include = [
+    "LICENSE",
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+lung_point_generator = "*"
+lung_annotator = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[tool.poetry.scripts]
+lung-annotation-maker = 'lung-annotation-maker.__main__.:main'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
