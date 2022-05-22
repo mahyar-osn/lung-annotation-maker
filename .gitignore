@@ -130,3 +130,6 @@ dmypy.json
 
 # Pycharm .idea
 .idea/
+
+# Downloaded model
+downloaded_model/
